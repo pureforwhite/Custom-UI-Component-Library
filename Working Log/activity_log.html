@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity Log</title>
+<style>
+  body { font-family: 'Helvetica', sans-serif; color: #333; background-color: #f4f4f4; margin: 40px; }
+  h1 { color: #222; font-size: 24px; }
+  h3 { color: #555; font-size: 18px; margin-top: 10px; }
+  p { color: #666; font-size: 16px; margin-left: 20px; }
+  hr { border: none; height: 1px; background-color: #ccc; margin-top: 20px; }
+</style>
+</head>
+<body>
+<h1>Monday, May 06, 2024</h1>
+<h3>20:10:34</h3>
+<p>Project started, setting up time-line, but there is a little bug when on click on the timeline, when the cursor is on the text the alert is not being triggered but when I slightly move the cursor upper than the text the alert triggered</p>
+<hr>
+<h3>20:10:39</h3>
+<p>I think it is a hitbox issue, when I clicked into the text there are no listener, this issue might be related to event delegation, I decided to make every part no matter the container or the text, they all trigger the event, we can make sure event are being triggered on any of the sub elements but not just click on the container, I use .closest() to make this approach. Follow the DOM tree to upper until find the correct selector and elements.</p>
+<hr>
+<h3>20:10:45</h3>
+<p>The basic frame of time line event has been completed, but I want to make it more fancy, I am trying to add a float effect to it, but when I am adding the visual effect, I am facing a problem, when my cursor hover on one of the event, those two event float together it is so weird</p>
+<hr>
+<h3>20:10:52</h3>
+<p>as I can see it is because the float effect is applying to the whole time line container but no specific event. To solve this problem I decided to set mouseover and mouseout event processor for each .timeline-item in addHoverEffects</p>
+<hr>
+<h3>20:10:56</h3>
+<p>I think the timeline event is not floating smoothly, so I added "transition: box-shadow 0.3s ease, transform 0.3s ease;" in style.css. Now it is working perfectly</p>
+<hr>
+<h3>20:11:00</h3>
+<p>I try to make it everything working in javascript so I removed the code in css and make the effects work inside the javascript. I used "animateItem" to process timeline animation and use "requestAnimationFrame" to smooth "boxShadow" and "transform" properties. use true or false to decide start the animation or not in "hovering" variable. "effectDuration" variable would be the running time of the animation. Using recursive loop to run "requestAnimationFrame" update every frame until the animation completed</p>
+<hr>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity Log</title>
+<style>
+  body { font-family: 'Helvetica', sans-serif; color: #333; background-color: #f4f4f4; margin: 40px; }
+  h1 { color: #222; font-size: 24px; }
+  h3 { color: #555; font-size: 18px; margin-top: 10px; }
+  p { color: #666; font-size: 16px; margin-left: 20px; }
+  hr { border: none; height: 1px; background-color: #ccc; margin-top: 20px; }
+</style>
+</head>
+<body>
+<h3>20:12:12</h3>
+<p>Now I am working on the next step, a dynamic graph generator. </p>
+<hr>
+<h3>20:14:15</h3>
+<p>I tried to use chart.js to create the chart and it is looking great but since I am making a UI component library so I decided to make it all on my own</p>
+<hr>
+<h3>20:15:13</h3>
+<p>first I must include <canvas id="myChart" width="600" height="400"></canvas> in my index.html otherwise I cant continue with my javascript programming </p>
+<hr>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 組件庫</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timeline-container">
+        <div class="timeline-item" data-date="2024-01-01">
+            <h2>事件標題</h2>
+            <p>這是事件的描述。</p>
+        </div>
+        <div class="timeline-item" data-date="2024-02-01">
+            <h2>另一個事件標題</h2>
+            <p>這是另一個事件的描述。</p>
+        </div>
+        <!-- 更多時間軸項目 -->
+    </div>
+
+    <canvas id="myChart" width="600" height="400"></canvas>
+    <canvas id="myChartBar" width="600" height="400"></canvas>
+    <canvas id="myChartPie" width="400" height="400"></canvas>
+    <canvas id="myChartRadar" width="400" height="400"></canvas>
+    <canvas id="myChartScatter" width="600" height="400"></canvas>
+    <canvas id="myChartArea" width="600" height="400"></canvas>
+    <div id="virtualAssistant" class="virtual-assistant">
+        <div class="chat-container">
+            <ul id="chatList" class="chat-list">
+                <!-- 對話內容動態添加到這裡 -->
+            </ul>
+        </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="輸入您的問題..." />
+            <button onclick="sendMessage()">發送</button>
+        </div>
+    </div>
+    
+
+
+
+    <script src="UI.js"></script>
+</body>
+</html>
